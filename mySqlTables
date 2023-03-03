@@ -1,0 +1,82 @@
+-------- Table defined
+
+  Like a spreadsheet
+  Rows of entries with columns for each category of data
+  Each column must have a specified data type
+  Many data types which we will explore momentarily
+
+
+-------- Showing tables
+
+  USE (SOME_DB);
+  SHOW TABLES;
+
+-------- Creating a table
+
+  CREATE TABLE guests (
+    name VARCHAR(100),
+    age TINYINT
+  );
+
+-------- Describing tables
+
+  DESCRIBE guests;
+  (insert a test row and show the data)
+
+-------- Dropping tables
+
+  DROP TABLE guests;
+
+-------- Running SQL files
+
+  mysql -u root -p -t < filename.sql
+
+-------- Common data types
+
+  NUMERIC
+    INT, FLOAT, DOUBLE, DECIMAL (discuss length)
+    (discuss UNSIGNED), BOOLEAN
+
+  STRING TYPES
+    CHAR, VARCHAR, TEXT
+
+  DATE TYPES
+    DATE, TIME, DATETIME
+
+-------- Default values and NOT NULL
+
+  NOT NULL without a DEFAULT value means that a value must be provided when inserting new records
+  NOT NULL with DEFAULT means empty value will be default and null insertion is error
+  NULL with DEFAULT means that if an empty value is inserted, it will be the DEFAULT value
+  NULL without DEFAULT means empty values inserted will be null
+
+-------- Primary keys
+
+  Purpose
+
+  Syntax...
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT
+    PRIMARY KEY (id)
+
+
+-------- ***COMMON BEST PRACTICES***
+
+  Use the best data type for the job
+  Use DECIMAL(10, 2) for currency (NEVER use floats or doubles!)
+  Use VARCHAR for phone numbers
+
+-------- Create contacts table migration file
+
+  -- CREATE CONTACTS TABLE --
+
+  id
+  name
+  number
+  email
+  created_at
+  updated_at
+
+-------- EXERCISE
+
+Use DECIMAL (10,2) for currency
+Use VARCHAR for phone numbers
