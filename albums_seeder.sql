@@ -35,3 +35,6 @@ INSERT INTO albums(ARTIST, NAME, RELEASE_DATE, GENRE, SALES)
     ('Santana', 'Supernatural', 1999, 'Rock', 20.5),
     ('Guns N Roses','Appetite for Destruction', 1987,'Hard rock', 21.6);
 
+SELECT * FROM albums;
+DESCRIBE  albums;
+SHOW INDEX FROM albums;

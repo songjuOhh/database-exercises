@@ -9,5 +9,6 @@ CREATE TABLE albums (
                           release_date SMALLINT UNSIGNED,
                           genre VARCHAR(128) ,
                           sales FLOAT,
-                          PRIMARY KEY (id)
+                          PRIMARY KEY (id),
+                          UNIQUE album_title (name, artist)
 );
